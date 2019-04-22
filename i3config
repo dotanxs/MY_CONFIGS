@@ -14,7 +14,8 @@ default_orientation vertical
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 7.5
+font pango:Inconsolata 7
+#font pango:monospace 7.5
 #font pango:quicksand 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -40,7 +41,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -modi run -show run
+#bindsym $mod+d exec rofi -modi run -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -298,7 +300,7 @@ bindsym XF86Tools exec systemctl suspend
 #}
 
 # SCREENSHOT - FULL CAPTURE
-bindsym Print exec scrot -e 'mv $f ~/screens/'
+bindsym Print exec scrot -e 'mv $f ~/screens/' && notify-send "screen'd" --urgency=low
 
 # SCREENSHOT - SHUTTER APP
 #bindsym Shift+Print exec shutter --min_at_startup
@@ -315,3 +317,4 @@ bindsym --release XF86AudioMute exec pkill -SIGRTMIN+10 i3blocks
 bindsym --release XF86AudioMicMute exec pkill -SIGRTMIN+10 i3blocks
 
 exec compton -f
+exec dunst -conf ~/.config/Dunst/dunstrc1

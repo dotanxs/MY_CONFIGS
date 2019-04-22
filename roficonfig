@@ -1,0 +1,12 @@
+rofi.combi-modi: window, drun, ssh
+rofi.combi-modi: drun,ssh
+rofi.theme: android_notification
+rofi.modi: combi,run
+rofi.width: 33
+rofi.lines: 3
+rofi.eh: 1
+rofi.opacity: 55
+rofi.bw: 0
+#rofi.color-normal: #2f343f, #f3f4f5, #2f343f, #2f343f, #9575cd
+#rofi.color-window: #2f343f, #2f343f, #2f343f
+rofi.font: pango:Inconsolata 8
