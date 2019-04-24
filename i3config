@@ -216,7 +216,7 @@ bar {
 ### i3-gaps stuff ###
 
 # Necessary for i3-gaps to work properly (pixel can be any value)
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1.5
 
 # Smart Gaps
 smart_gaps on
@@ -225,8 +225,8 @@ smart_gaps on
 smart_borders on
 
 # Set inner/outer gaps
-gaps inner 4
-gaps outer 4
+gaps inner 15
+gaps outer 0
 
 # Gaps mode
 set $mode_gaps Gaps: (o) outer, (i) inner
