@@ -25,7 +25,7 @@ if [ "$(tty)" = "/dev/tty1" ]; then
 	pgrep -x i3 || exec startx
 fi
 
-export EDITOR="/usr/bin/vim"
+export EDITOR="vim"
 export TERMINAL="urxvt"
 export TRUEBROWSER="firefox-esr"
 export READER="zathura"
