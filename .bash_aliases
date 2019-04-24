@@ -25,5 +25,6 @@ cfgb () { cp $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3config \
       && cp $HOME/.bash_aliases  $HOME/git-src/MY_CONFIGS/.bash_aliases \
       && cp $HOME/.config/i3/i3blocks.conf $HOME/git-src/MY_CONFIGS/i3blocks.conf \
       && cp $HOME/.config/rofi/config $HOME/git-src/MY_CONFIGS/rofi.conf \
+      && cp $HOME/.Xresources $HOME/git-src/MY_CONFIGS/.Xresources \
       && cp $HOME/.vimrc $HOME/git-src/MY_CONFIGS/.vimrc ;}
 
