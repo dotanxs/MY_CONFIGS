@@ -15,14 +15,13 @@ Plugin 'gmarik/Vundle.vim'
 " used Bundle instead of Plugin)
 
 " ...
+Plugin 'lifepillar/vim-solarized8'
 Plugin 'reedes/vim-wordy'
 Plugin 'instant-markdown.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
@@ -83,11 +82,13 @@ let python_highlight_all=1
 syntax on
 let g:SimpylFold_docstring_preview=1
 
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 set rnu
-if has('gui_running')
-	set background=dark
-	colorscheme solarized
-else
-	colorscheme zenburn
-endif
+"if has('gui_running')
+"	set background=dark
+"	colorscheme solarized
+"else
+"	colorscheme solarized
+"endif
+set textwidth=90
+command! -nargs=* Wrap set wrap linebreak nolist

@@ -124,6 +124,7 @@ bindsym $mod+0 workspace $workspace10
 
 assign [class="Firefox-esr"] $workspace1
 assign [class="URxvt"] $workspace2
+assign [class="st-256color"] $workspace2
 assign [class="Pcmanfm"] $workspace5
 assign [class="Spacefm"] $workspace6
 assign [class="Code"] $workspace7

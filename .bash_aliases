@@ -19,6 +19,7 @@ alias mkd="mkdir -pv"
 se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
 #se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 vf () { fzf | parallel -X --tty -r $EDITOR ;}
+svf () { fzf | parallel -X --tty -r sudo $EDITOR ;}
 cfgb () { cp $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3config \
        && cp $HOME/.bashrc $HOME/git-src/MY_CONFIGS/.bashrc \
       && cp $HOME/.profile $HOME/git-src/MY_CONFIGS/.bash_profile \
@@ -26,5 +27,6 @@ cfgb () { cp $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3config \
       && cp $HOME/.config/i3/i3blocks.conf $HOME/git-src/MY_CONFIGS/i3blocks.conf \
       && cp $HOME/.config/rofi/config $HOME/git-src/MY_CONFIGS/rofi.conf \
       && cp $HOME/.Xresources $HOME/git-src/MY_CONFIGS/.Xresources \
+      && cp $HOME/g/st/config.h $HOME/git-src/MY_CONFIGS/st-config.h \
       && cp $HOME/.vimrc $HOME/git-src/MY_CONFIGS/.vimrc ;}
 
