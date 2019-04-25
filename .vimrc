@@ -1,5 +1,5 @@
 set nocompatible              " required
-filetype off                  " required
+filetype on                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -65,9 +65,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
 "python with virtualenv support
 py3 << EOF
 import os
@@ -82,7 +79,6 @@ let python_highlight_all=1
 syntax on
 let g:SimpylFold_docstring_preview=1
 
-"call togglebg#map("<F5>")
 set rnu
 "if has('gui_running')
 "	set background=dark
@@ -91,4 +87,5 @@ set rnu
 "	colorscheme solarized
 "endif
 set textwidth=90
+"command! -nargs=* Wrap set wrap linebreak nolist
 command! -nargs=* Wrap set wrap linebreak nolist

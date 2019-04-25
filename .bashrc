@@ -100,3 +100,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export EDITOR="vim"
+export TERMINAL="st"
+export TRUEBROWSER="firefox-esr"
+export READER="zathura"
+export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"

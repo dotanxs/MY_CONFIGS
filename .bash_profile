@@ -24,9 +24,3 @@ fi
 if [ "$(tty)" = "/dev/tty1" ]; then
 	pgrep -x i3 || exec startx
 fi
-
-export EDITOR="vim"
-export TERMINAL="urxvt"
-export TRUEBROWSER="firefox-esr"
-export READER="zathura"
-export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
