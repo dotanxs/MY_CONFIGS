@@ -103,6 +103,6 @@ fi
 
 export EDITOR="vim"
 export TERMINAL="st"
-export TRUEBROWSER="firefox-esr"
-export READER="zathura"
+export TRUEBROWSER="firefox"
+export READER="mupdf"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"

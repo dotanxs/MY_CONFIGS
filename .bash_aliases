@@ -32,4 +32,3 @@ cfgb () { cp $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3/i3config \
       && cp $HOME/g/st/st.h $HOME/git-src/MY_CONFIGS/st/st.h \
       && cp $HOME/g/st/x.c $HOME/git-src/MY_CONFIGS/st/x.c \
       && cp $HOME/.vimrc $HOME/git-src/MY_CONFIGS/vim/.vimrc ;}
-
