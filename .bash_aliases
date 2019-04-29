@@ -32,3 +32,8 @@ cfgb () { cp $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3/i3config \
       && cp $HOME/g/st/st.h $HOME/git-src/MY_CONFIGS/st/st.h \
       && cp $HOME/g/st/x.c $HOME/git-src/MY_CONFIGS/st/x.c \
       && cp $HOME/.vimrc $HOME/git-src/MY_CONFIGS/vim/.vimrc ;}
+#alias mpdf="parallel -I% pandoc %.md --pdf-engine=xelatex -o %.pdf ::: "
+mp () { fzf | cut -d '.' -f 1 | \
+	parallel -X --tty -I% -r pandoc %.md --pdf-engine=xelatex -o $() %.pdf ;}
+tp () { fzf | cut -d '.' -f 1 | \
+	parallel -X --tty -I% -r pandoc %.tex --pdf-engine=xelatex -o $() %.pdf ;}
