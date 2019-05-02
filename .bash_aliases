@@ -15,11 +15,13 @@ alias scrots="scrot -s -e 'mv $f ~/screens/'"
 alias ytd="youtube-dl --add-metadata -ic" # download video
 alias ytad="youtube-dl --add-metadata -xic" # download audio
 alias mkd="mkdir -pv"
+alias m="mupdf"
+alias r="ranger"
 
-se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
 #se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-vf () { fzf | parallel -X --tty -r $EDITOR ;}
-svf () { fzf | parallel -X --tty -r sudo $EDITOR ;}
+se () { du -a ~/* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
+vf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
+svf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r sudo $EDITOR ;}
 cfgb () { cp $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3/i3config \
        && cp $HOME/.bashrc $HOME/git-src/MY_CONFIGS/.bashrc \
       && cp $HOME/.profile $HOME/git-src/MY_CONFIGS/.bash_profile \
