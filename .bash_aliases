@@ -17,6 +17,7 @@ alias ytad="youtube-dl --add-metadata -xic" # download audio
 alias mkd="mkdir -pv"
 alias m="mupdf"
 alias r="ranger"
+alias t="todo.sh"
 
 #se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 se () { du -a ~/* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
