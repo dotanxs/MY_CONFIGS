@@ -131,6 +131,7 @@ assign [class="st-256color"] $workspace2
 assign [class="Pcmanfm"] $workspace7
 #assign [class="Spacefm"] $workspace6
 assign [class="Code"] $workspace6
+assign [class="Slack"] $workspace6
 assign [class="Thunderbird"] $workspace8
 assign [class="Signal"] $workspace9
 

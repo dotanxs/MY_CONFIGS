@@ -20,21 +20,24 @@ alias r="ranger"
 alias t="todo.sh"
 
 #se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-se () { du -a ~/* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
+ce () { du -a ~/.config* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
 vf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
 svf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r sudo $EDITOR ;}
-cfgb () { cp $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3/i3config \
-       && cp $HOME/.bashrc $HOME/git-src/MY_CONFIGS/.bashrc \
-      && cp $HOME/.profile $HOME/git-src/MY_CONFIGS/.bash_profile \
-      && cp $HOME/.bash_aliases  $HOME/git-src/MY_CONFIGS/.bash_aliases \
-      && cp $HOME/.config/i3/i3blocks.conf $HOME/git-src/MY_CONFIGS/i3/i3blocks.conf \
-      && cp $HOME/.config/rofi/config $HOME/git-src/MY_CONFIGS/rofi/rofi.conf \
-      && cp $HOME/.Xresources $HOME/git-src/MY_CONFIGS/.Xresources \
-      && cp $HOME/g/st/config.h $HOME/git-src/MY_CONFIGS/st/st-config.h \
-      && cp $HOME/g/st/st.c $HOME/git-src/MY_CONFIGS/st/st.c \
-      && cp $HOME/g/st/st.h $HOME/git-src/MY_CONFIGS/st/st.h \
-      && cp $HOME/g/st/x.c $HOME/git-src/MY_CONFIGS/st/x.c \
-      && cp $HOME/.vimrc $HOME/git-src/MY_CONFIGS/vim/.vimrc ;}
+sgd () { cp -v $HOME/docs/commands.md $HOME/docs/gdrive-share/ \
+	&& cp -v $HOME/docs/cisco-commands.md $HOME/docs/gdrive-share/ \
+	&& cp -v $HOME/docs/journal.md $HOME/docs/gdrive-share/ ;}
+cfgb () { cp -v $HOME/.config/i3/config $HOME/git-src/MY_CONFIGS/i3/i3config \
+       && cp -v $HOME/.bashrc $HOME/git-src/MY_CONFIGS/.bashrc \
+      && cp -v $HOME/.profile $HOME/git-src/MY_CONFIGS/.bash_profile \
+      && cp -v $HOME/.bash_aliases  $HOME/git-src/MY_CONFIGS/.bash_aliases \
+      && cp -v $HOME/.config/i3/i3blocks.conf $HOME/git-src/MY_CONFIGS/i3/i3blocks.conf \
+      && cp -v $HOME/.config/rofi/config $HOME/git-src/MY_CONFIGS/rofi/rofi.conf \
+      && cp -v $HOME/.Xresources $HOME/git-src/MY_CONFIGS/.Xresources \
+      && cp -v $HOME/g/st/config.h $HOME/git-src/MY_CONFIGS/st/st-config.h \
+      && cp -v $HOME/g/st/st.c $HOME/git-src/MY_CONFIGS/st/st.c \
+      && cp -v $HOME/g/st/st.h $HOME/git-src/MY_CONFIGS/st/st.h \
+      && cp -v $HOME/g/st/x.c $HOME/git-src/MY_CONFIGS/st/x.c \
+      && cp -v $HOME/.vimrc $HOME/git-src/MY_CONFIGS/vim/.vimrc ;}
 #alias mpdf="parallel -I% pandoc %.md --pdf-engine=xelatex -o %.pdf ::: "
 mp () { fzf | cut -d '.' -f 1 | \
 	parallel -X --tty -I% -r pandoc %.md --pdf-engine=xelatex -o $() %.pdf ;}

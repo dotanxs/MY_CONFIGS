@@ -106,3 +106,6 @@ export TERMINAL="st"
 export TRUEBROWSER="firefox"
 export READER="mupdf"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
+export VITASDK=/usr/local/vitasdk
+export PATH=$VITASDK/bin:$PATH
+
