@@ -23,6 +23,7 @@ alias shutdown="systemctl shutdown"
 
 alias cfgb="$HOME/.scripts/cfgb.sh"
 alias sgd="$HOME/.scripts/sgd.sh"
+alias cpdf="$HOME/.scripts/cpdf.sh"
 
 #se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 ce () { du -a ~/.config* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
@@ -30,7 +31,3 @@ vf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r $EDI
 svf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r sudo $EDITOR ;}
 
 #alias mpdf="parallel -I% pandoc %.md --pdf-engine=xelatex -o %.pdf ::: "
-mp () { fzf | cut -d '.' -f 1 | \
-	parallel -X --tty -I% -r pandoc %.md --pdf-engine=xelatex -o $() %.pdf ;}
-tp () { fzf | cut -d '.' -f 1 | \
-	parallel -X --tty -I% -r pandoc %.tex --pdf-engine=xelatex -o $() %.pdf ;}
