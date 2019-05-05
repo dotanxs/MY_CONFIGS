@@ -183,9 +183,10 @@ bindsym $mod+r mode "resize"
 # COLOURS
 #set $bg-color			#2f343f
 set $bg3-color			#afafaf
-set $bg2-color			#2f343f
+#set $bg2-color			#2f343f
+set $bg2-color			#002b36
 set $bg-color			#757575
-set $inactive-bg-color		#2f343f
+set $inactive-bg-color		#002b36
 set $text-color			#676E7D
 set $inactive-text-color 	#676E7D
 #set $urgent-bg-color 		#E53935
