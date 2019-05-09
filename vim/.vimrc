@@ -86,6 +86,9 @@ set rnu
 "else
 "	colorscheme solarized
 "endif
-set textwidth=92
 "command! -nargs=* Wrap set wrap linebreak nolist
-set wrap linebreak nolist
+command! -nargs=* Wrap set wrap linebreak nolist textwidth=100
+"set textwidth=100
+"set wrap linebreak nolist
+
+nnoremap zx :update<cr>

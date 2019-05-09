@@ -3,8 +3,9 @@
 # original script created by Luke Smith
 
 pgrep -x dmenu && exit
+exclusionregex="\(/dev/sda1\|/dev/sda3\|/dev/sda5\)$"
 
-mountable=$(lsblk -lp | grep "part $" | awk '{print $1, "(" $4 ")"}')
+mountable=$(lsblk -pr | grep "part $" | grep -v "sda" | awk '{print $1, "(" $4 ")"}')
 [[ "$mountable" = "" ]] && exit
 chosen=$(echo "$mountable" | dmenu -i -p "Mount?" | awk '{print $1}')
 [[ "$chosen" = "" ]] && exit

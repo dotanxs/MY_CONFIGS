@@ -25,6 +25,8 @@ alias cfgb="$HOME/.scripts/cfgb.sh"
 alias sgd="$HOME/.scripts/sgd.sh"
 alias cpdf="$HOME/.scripts/cpdf.sh"
 
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y"
+
 #se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 ce () { du -a ~/.config* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
 vf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}

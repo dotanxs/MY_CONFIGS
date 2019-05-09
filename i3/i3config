@@ -323,5 +323,8 @@ bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+10 i3blocks
 bindsym --release XF86AudioMute exec pkill -SIGRTMIN+10 i3blocks
 bindsym --release XF86AudioMicMute exec pkill -SIGRTMIN+10 i3blocks
 
+bindsym $mod+F9 exec $HOME/.scripts/dmenu-mount.sh
+bindsym $mod+F10 exec $HOME/.scripts/dmenu-umount.sh
+
 exec compton -f
 exec dunst -conf ~/.config/Dunst/dunstrc1
