@@ -45,6 +45,14 @@ set foldlevel=99
 "Enable folding with the spacebar
 nnoremap <space> za
 
+au BufNewFile,BufRead *.md,*.tex
+\ set tabstop=4 |
+\ set softtabstop=4 |
+\ set shiftwidth=4 |
+\ set textwidth=92 |
+\ set expandtab |
+\ set autoindent
+
 au BufNewFile,BufRead *.py
 \ set tabstop=4 |
 \ set softtabstop=4 |
