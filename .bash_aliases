@@ -21,9 +21,10 @@ alias t="todo.sh"
 alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown"
 
-alias cfgb="$HOME/.scripts/cfgb.sh"
-alias sgd="$HOME/.scripts/sgd.sh"
-alias cpdf="$HOME/.scripts/cpdf.sh"
+alias cfgb="$HOME/.scripts/config-backup.sh"
+alias sgd="$HOME/.scripts/share-googledrive.sh"
+alias cpdf="$HOME/.scripts/convert-to-pdf.sh"
+alias gitup="$HOME/.scripts/git-update-config.sh"
 
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y"
 
