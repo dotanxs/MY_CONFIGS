@@ -27,19 +27,8 @@ if [ -f $usermodmap ]; then
 fi
 # invoke global X session script
 #. /etc/X11/Xsession
-#feh --bg-center ~/Pictures/wallpapers/city-rain.jpg
 feh --bg-fill ~/Pictures/wallpapers/by_upload2_2560.jpg
 #feh --bg-fill ~/Pictures/wallpapers/city-rain.jpg
-#feh --bg-center ~/Downloads/img/ouroboros_of_life_and_death_by_labornthyn.jpg
-#feh --bg-scale ~/Downloads/img/yog_sothoth_by_ioanz-dcb4ozv.jpg
 exec keynav &
 exec i3
 #exec dwm
-#while true; do 
-#	read -n 1 -p "PleSE select which one to run, i3wm or dwm? " id;
-#	case $id in 
-#		[Ii]* ) exec i3; break;;
-#		[Dd]* ) exec dwm; break;;
-#		* ) echo "Please select i3wm or dwm. ";;
-#	esac;
-#done

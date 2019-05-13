@@ -23,12 +23,3 @@ fi
 
 if [ "$(tty)" = "/dev/tty1" ]; then
 	pgrep -x i3 || exec startx
-#	while true; do 
-#		read -n 1 -p "PleSE select which one to run, i3wm or dwm? " id;
-#		case $id in 
-#			[Ii]* ) exec i3; break;;
-#			[Dd]* ) exec dwm; break;;
-#			* ) echo "Please select i3wm or dwm. ";;
-#		esac;
-#	done
-fi
