@@ -21,5 +21,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+#if [ "$(tty)" = "/dev/tty1" ]; then
+#	pgrep -x i3 || exec startx
+
 if [ "$(tty)" = "/dev/tty1" ]; then
-	pgrep -x i3 || exec startx
+	exec tdm --disable-xrunning-check
+fi

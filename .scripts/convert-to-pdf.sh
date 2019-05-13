@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # script to convert files to pdf depending on the extension.
 

@@ -27,8 +27,9 @@ if [ -f $usermodmap ]; then
 fi
 # invoke global X session script
 #. /etc/X11/Xsession
-feh --bg-fill ~/Pictures/wallpapers/by_upload2_2560.jpg
-#feh --bg-fill ~/Pictures/wallpapers/city-rain.jpg
+#feh --bg-fill ~/Pictures/wallpapers/by_upload2_2560.jpg
+feh --bg-fill ~/Pictures/wallpapers/city-rain.jpg
 exec keynav &
-exec i3
+#exec i3
 #exec dwm
+exec tdm --xstart
