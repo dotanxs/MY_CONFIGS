@@ -15,4 +15,4 @@ cp -v $HOME/g/st/config.h $HOME/git-src/MY_CONFIGS/st/st-config.h
 cp -v $HOME/g/st/st.c $HOME/git-src/MY_CONFIGS/st/st.c
 cp -v $HOME/g/st/st.h $HOME/git-src/MY_CONFIGS/st/st.h
 cp -v $HOME/g/st/x.c $HOME/git-src/MY_CONFIGS/st/x.c
-cp -v $HOME/.scripts/*.sh $HOME/git-src/MY_CONFIGS/.scripts/
+cp -v $HOME/.scripts/* $HOME/git-src/MY_CONFIGS/.scripts/
