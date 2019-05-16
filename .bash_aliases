@@ -27,6 +27,7 @@ alias c="clear"
 alias m="mupdf"
 alias r="ranger"
 alias t="todo.sh"
+alias v="vim"
 alias z="zathura"
 
 # scripts

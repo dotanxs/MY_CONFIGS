@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # script copies various config files to git-src folder.
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # script copies markdown files to a GDrive shared location.
 

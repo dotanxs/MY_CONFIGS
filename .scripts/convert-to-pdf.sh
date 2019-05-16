@@ -1,22 +1,21 @@
-#!/bin/bash
+#!/bin/sh
 
 # script to convert files to pdf depending on the extension.
 
-filename=$( fzf )
-file=$( echo "$filename" | cut -d '.' -f 1 )
-ext=$( echo "$filename" | cut -d '.' -f 2 )
-case $ext in
-	md) pandoc "$filename" --pdf-engine=xelatex -o "$file".pdf
+fullname=$( fzf )
+filename=$( echo "$filename" | cut -d '.' -f 1 )
+case $fullname in
+	*.md) pandoc "$fullname" --pdf-engine=xelatex -o "$filename".pdf
 		;;
-	tex) pandoc "$filename" --pdf-engine=xelatex -o "$file".pdf
+	*.tex) pandoc "$fullname" --pdf-engine=xelatex -o "$filename".pdf
 		;;
-	ms) groff -ms "$filename" -T pdf > "$file".pdf
+	*.ms) groff -ms "$fullname" -T pdf > "$filename".pdf
 		;;
-	mm) groff -mm "$filename" -T pdf > "$file".pdf
+	*.mm) groff -mm "$fullname" -T pdf > "$filename".pdf
 		;;
-	me) groff -me "$filename" -T pdf > "$file".pdf
+	*.me) groff -me "$fullname" -T pdf > "$filename".pdf
 		;;
-	*) echo "$filename : Not processed"
+	*) echo "$fullname : Not processed"
 		;;
 esac
 	

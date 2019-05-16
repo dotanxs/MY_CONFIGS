@@ -99,5 +99,4 @@ command! -nargs=* Wrap set wrap linebreak nolist textwidth=100
 "set textwidth=100
 "set wrap linebreak nolist
 
-nnoremap zx :update<cr>
-nnoremap zq :quit<cr>
+nnoremap <leader>q :update<cr>:quit<cr>

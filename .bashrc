@@ -103,9 +103,10 @@ fi
 
 export EDITOR="vim"
 export TERMINAL="st"
+export BROWSER="firefox"
 export TRUEBROWSER="firefox"
 export READER="zathura"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export VITASDK=/usr/local/vitasdk
 export PATH=$VITASDK/bin:$PATH
-set -o vi
+#set -o vi
