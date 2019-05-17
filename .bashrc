@@ -103,7 +103,7 @@ fi
 
 export EDITOR="vim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="surf"
 export TRUEBROWSER="firefox"
 export READER="zathura"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
