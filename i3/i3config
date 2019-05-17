@@ -297,20 +297,11 @@ bindsym XF86Explorer exec "~/.scripts/fuzzy-lock.sh"
 exec xautolock -time 10 -locker "~/.scripts/fuzzy-lock.sh" &
 bindsym XF86Tools exec systemctl suspend
 
-# DEAD, MOŻE SIĘ PRZYDAĆ
-#bindsym Print mode "skriny"
-#
-#mode "skriny" {
-#    bindsym f exec scrot -e 'mv $f ~/screens/'; mode "default"
-#    bindsym s exec scrots; mode "default"
-#    bindsym Escape mode "default"
-#}
-
 # SCREENSHOT - FULL CAPTURE
 bindsym Print exec scrot -e 'mv $f ~/screens/' && notify-send "screen'd" --urgency=low
 
 # SCREENSHOT - SHUTTER APP
-bindsym Shift+Print exec shutter --min_at_startup
+bindsym $mod+Print exec shutter --min_at_startup
 exec shutter --min_at_startup
 
 # STICKY WINDOW - FLOATING REQUIRED
@@ -325,6 +316,7 @@ bindsym --release XF86AudioMicMute exec pkill -SIGRTMIN+10 i3blocks
 
 bindsym $mod+F9 exec $HOME/.scripts/dmenu-mount.sh
 bindsym $mod+F10 exec $HOME/.scripts/dmenu-umount.sh
+bindsym $mod+F11 exec $HOME/.scripts/dmenu-quick-surf.sh
 bindsym $mod+F12 exec $HOME/.scripts/emoji-search.sh
 bindsym $mod+x [urgent=latest] focus
 
