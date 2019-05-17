@@ -5,5 +5,5 @@
 sh $HOME/.scripts/config-backup.sh
 cd $HOME/git-src/MY_CONFIGS/
 git add .
-git commit -am 'xx'
+git commit -a
 cd -

@@ -15,4 +15,5 @@ cp -v $HOME/g/st/config.h $HOME/git-src/MY_CONFIGS/st/st-config.h
 cp -v $HOME/g/st/st.c $HOME/git-src/MY_CONFIGS/st/st.c
 cp -v $HOME/g/st/st.h $HOME/git-src/MY_CONFIGS/st/st.h
 cp -v $HOME/g/st/x.c $HOME/git-src/MY_CONFIGS/st/x.c
+cp -v $HOME/g/surf/config.h $HOME/git-src/MY_CONFIGS/surf/config.h
 cp -v $HOME/.scripts/* $HOME/git-src/MY_CONFIGS/.scripts/
