@@ -313,6 +313,7 @@ bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 1 +5% #increase BT so
 bindsym $mod+F4 exec --no-startup-id pactl set-sink-volume 1 100% # set BT volume to 100%
 
 # SCRIPTS
+bindsym $mod+F8 exec st -e bluetoothctl
 bindsym $mod+F9 exec $HOME/.scripts/dmenu-mount.sh
 bindsym $mod+F10 exec $HOME/.scripts/dmenu-umount.sh
 bindsym $mod+F11 exec $HOME/.scripts/dmenu-quick-surf.sh
