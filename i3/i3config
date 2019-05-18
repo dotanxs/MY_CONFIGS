@@ -276,16 +276,6 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle # mute mic
-
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
-
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
@@ -294,10 +284,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 #bindsym XF86AudioPause exec playerctl pause
 #bindsym XF86AudioNext exec playerctl next
 #bindsym XF86AudioPrev exec playerctl previous
-
-bindsym XF86Explorer exec "~/.scripts/fuzzy-lock.sh"
-exec xautolock -time 10 -locker "~/.scripts/fuzzy-lock.sh" &
-bindsym XF86Tools exec systemctl suspend
 
 # SCREENSHOT - FULL CAPTURE
 bindsym Print exec scrot -e 'mv $f ~/screens/' && notify-send "screen'd" --urgency=low
@@ -309,18 +295,40 @@ exec shutter --min_at_startup
 # STICKY WINDOW - FLOATING REQUIRED
 bindsym $mod+Shift+s sticky toggle
 
+# SCREEN LOCK
+bindsym XF86Explorer exec "~/.scripts/fuzzy-lock.sh"
+exec xautolock -time 10 -locker "~/.scripts/fuzzy-lock.sh" &
+bindsym XF86Tools exec systemctl suspend
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle # mute mic
+
+# Pulse Audio controls (BT)
+bindsym $mod+F1 exec pavucontrol
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 1 -5% #decrease BT sound volume
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 1 +5% #increase BT sound volume
+bindsym $mod+F4 exec --no-startup-id pactl set-sink-volume 1 100% # set BT volume to 100%
+
+# SCRIPTS
+bindsym $mod+F9 exec $HOME/.scripts/dmenu-mount.sh
+bindsym $mod+F10 exec $HOME/.scripts/dmenu-umount.sh
+bindsym $mod+F11 exec $HOME/.scripts/dmenu-quick-surf.sh
+bindsym $mod+F12 exec $HOME/.scripts/emoji-search.sh
+
+bindsym $mod+x [urgent=latest] focus
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 # KEY INDICATORS
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release XF86AudioRaiseVolume exec pkill -SIGRTMIN+10 i3blocks
 bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+10 i3blocks
 bindsym --release XF86AudioMute exec pkill -SIGRTMIN+10 i3blocks
 bindsym --release XF86AudioMicMute exec pkill -SIGRTMIN+10 i3blocks
-
-bindsym $mod+F9 exec $HOME/.scripts/dmenu-mount.sh
-bindsym $mod+F10 exec $HOME/.scripts/dmenu-umount.sh
-bindsym $mod+F11 exec $HOME/.scripts/dmenu-quick-surf.sh
-bindsym $mod+F12 exec $HOME/.scripts/emoji-search.sh
-bindsym $mod+x [urgent=latest] focus
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
