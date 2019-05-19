@@ -35,13 +35,12 @@ alias cfgb="$HOME/.scripts/config-backup.sh"
 alias sgd="$HOME/.scripts/share-googledrive.sh"
 alias cpdf="$HOME/.scripts/convert-to-pdf.sh"
 alias gitup="$HOME/.scripts/git-update-config.sh"
+alias ce="$HOME/.scripts/config-edit.sh"
+alias vf="$HOME/.scripts/vim-file.sh"
+alias svf="$HOME/.scripts/sudo-vim-file.sh"
 
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y"
 
 #se () { du -a ~/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-
-ce () { du -a ~/.config* | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
-vf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r $EDITOR ;}
-svf () { du -a --max-depth=1 | awk '{print $2}' | fzf | parallel -X --tty -r sudo $EDITOR ;}
 
 #alias mpdf="parallel -I% pandoc %.md --pdf-engine=xelatex -o %.pdf ::: "
