@@ -49,7 +49,7 @@ au BufNewFile,BufRead *.md,*.tex
 \ set tabstop=4 |
 \ set softtabstop=4 |
 \ set shiftwidth=4 |
-\ set textwidth=92 |
+\ set textwidth=100 |
 \ set expandtab |
 \ set autoindent
 
@@ -88,12 +88,6 @@ syntax on
 let g:SimpylFold_docstring_preview=1
 
 set rnu
-"if has('gui_running')
-"	set background=dark
-"	colorscheme solarized
-"else
-"	colorscheme solarized
-"endif
 "command! -nargs=* Wrap set wrap linebreak nolist
 command! -nargs=* Wrap set wrap linebreak nolist textwidth=100
 "set textwidth=100
@@ -101,3 +95,6 @@ command! -nargs=* Wrap set wrap linebreak nolist textwidth=100
 
 nnoremap <leader>q :update<cr>:quit<cr>
 nnoremap zx :update<cr>
+let g:solarized_use16 = 1
+set background=dark
+colorscheme solarized8

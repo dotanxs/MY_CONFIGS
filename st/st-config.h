@@ -83,43 +83,37 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-/*	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-*/
-	/* 8 bright colors */
-/*	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-*/
 	/* more colors can be added after 255 to use with DefaultXX */
-/*	"#cccccc",
-	"#555555",
-	"black",
-	*/
 
-       /*"#acb8b9",*/  /* 12: gray   */
-       /*"#839496",*/  /* 12: brblue   */
+       /*"#dc322f",*/  /*  1: red      */
+       /*"#859900",*/  /*  2: green    */
+       /*"#aa1409",*/  /*  1: red    */
+
+      /* solarized dark */
+/*      "#073642",*/ /*  0: black    */
+/*      "#f44b3e",*/ /*  1: red    */
+/*      "#399900",*/ /*  2: green    */
+/*      "#b58900",*/ /*  3: yellow   */
+/*      "#268bd2",*/ /*  4: blue     */
+/*      "#d33682",*/ /*  5: magenta  */
+/*      "#2aa198",*/ /*  6: cyan     */
+/*      "#eee8d5",*/ /*  7: white    */
+/*      "#002b36",*/ /*  8: brblack  */
+/*      "#cb4b16",*/ /*  9: brred    */
+/*      "#586e75",*/ /* 10: brgreen  */
+/*      "#657b83",*/ /* 11: bryellow */
+/*      "#dfdfdf",*/ /* 12: lgray   */
+/*      "#6c71c4",*/ /* 13: brmagenta*/
+/*      "#93a1a1",*/ /* 14: brcyan   */
+/*      "#fdf6e3",*/ /* 15: brwhite  */
+
        /* solarized dark */
        "#073642",  /*  0: black    */
-       "#dc322f",  /*  1: red      */
+       "#dc322f",  /*  1: red    */
        "#859900",  /*  2: green    */
        "#b58900",  /*  3: yellow   */
        "#268bd2",  /*  4: blue     */
@@ -130,10 +124,12 @@ static const char *colorname[] = {
        "#cb4b16",  /*  9: brred    */
        "#586e75",  /* 10: brgreen  */
        "#657b83",  /* 11: bryellow */
-       "#dfdfdf",  /* 12: gray   */
+       "#839496",  /* 12: lgray   */
        "#6c71c4",  /* 13: brmagenta*/
        "#93a1a1",  /* 14: brcyan   */
        "#fdf6e3",  /* 15: brwhite  */
+
+       [255] = 0,
 
 };
 
